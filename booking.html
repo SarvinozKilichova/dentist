@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qabulga yozilish | Dental Clinic</title>
+  <meta name="description" content="Shifokoringizni, xizmatni va sizga qulay vaqtni tanlang.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/booking.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body class="loading">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-tooth" viewBox="0 0 24 24">
+      <path d="M7 3C4.5 3 3 5 3 7.5c0 2 1 3 1.5 5S5 21 7 21c1.5 0 1.5-4 2.5-6h5c1 2 1 6 2.5 6 2 0 1.5-6 2.5-8.5S21 9.5 21 7.5C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z" />
+    </symbol>
+  </svg>
+  <div id="loader" role="status" aria-label="Yuklanmoqda">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tooth" /></svg>
+    <div class="bar-line"></div>
+  </div>
+
+  <header>
+    <div class="wrap bar">
+      <a class="logo" href="index.html">
+        <svg class="ic" style="margin:0" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tooth" /></svg>
+        <span data-clinic="name"></span>
+      </a>
+      <a class="link" href="index.html">← Bosh sahifa</a>
+    </div>
+  </header>
+
+  <main class="bk">
+    <h1 style="font-size:2rem">Qabulga yozilish</h1>
+    <p class="lead" style="margin:8px 0 0">Shifokoringizni, xizmatni va sizga qulay vaqtni tanlang.</p>
+
+    <section class="step">
+      <h2>1. Xizmat</h2>
+      <div id="services" class="opts"></div>
+    </section>
+
+    <section class="step" id="step-doctor" hidden>
+      <h2>2. Shifokor</h2>
+      <div id="doctors" class="opts"></div>
+    </section>
+
+    <section class="step" id="step-date" hidden>
+      <h2>3. Sana</h2>
+      <label for="date" style="margin:0 0 6px">Qabul sanasi</label>
+      <input type="date" id="date">
+    </section>
+
+    <section class="step" id="step-time" hidden>
+      <h2>4. Bo‘sh vaqtlar</h2>
+      <div id="slots" class="slots" aria-live="polite"></div>
+      <p class="e" id="slots-error" role="alert"></p>
+    </section>
+
+    <form class="step" id="form" hidden novalidate>
+      <div id="step-info">
+        <h2>Ma’lumotlaringiz</h2>
+
+        <label for="name">Ism</label>
+        <input id="name" autocomplete="name" required>
+        <p class="e" id="name-error"></p>
+
+        <label for="phone">Telefon raqami</label>
+        <input id="phone" type="tel" autocomplete="tel" placeholder="+998 XX XXX XX XX" required>
+        <p class="e" id="phone-error"></p>
+
+        <label for="comment">Izoh (ixtiyoriy)</label>
+        <textarea id="comment" rows="3" maxlength="300"></textarea>
+
+        <div class="box"><dl class="sum" id="summary"></dl></div>
+        <p class="e" id="form-error" role="alert"></p>
+        <button class="btn" id="submit" type="submit">Qabulga yozilish</button>
+      </div>
+    </form>
+  </main>
+
+  <dialog id="modal" aria-labelledby="modal-title">
+    <h2 id="modal-title">✓ Qabulga muvaffaqiyatli yozildingiz!</h2>
+    <dl class="sum box" id="receipt"></dl>
+    <p><b>Ushbu ma’lumotni screenshot qilib oling yoki saqlab qo‘ying.</b></p>
+    <div class="acts">
+      <button class="btn ghost" id="save" type="button">Saqlab olish</button>
+      <button class="btn" id="ok" type="button">Tushunarli</button>
+    </div>
+  </dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+
+</html>

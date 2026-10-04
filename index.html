@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dental Clinic | Zamonaviy stomatologiya klinikasi</title>
+  <meta name="description" content="Zamonaviy stomatologik xizmatlar, tajribali shifokorlar va qulay online qabulga yozilish.">
+  <meta property="og:title" content="Dental Clinic | Zamonaviy stomatologiya klinikasi">
+  <meta property="og:description" content="Zamonaviy stomatologik xizmatlar, tajribali shifokorlar va qulay online qabulga yozilish.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero.webp">
+  <link rel="preload" as="image" href="assets/images/hero.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body class="loading">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-tooth" viewBox="0 0 24 24">
+      <path d="M7 3C4.5 3 3 5 3 7.5c0 2 1 3 1.5 5S5 21 7 21c1.5 0 1.5-4 2.5-6h5c1 2 1 6 2.5 6 2 0 1.5-6 2.5-8.5S21 9.5 21 7.5C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3z" />
+    </symbol>
+  </svg>
+  <div id="loader" role="status" aria-label="Yuklanmoqda">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tooth" /></svg>
+    <div class="bar-line"></div>
+  </div>
+
+  <header>
+    <div class="wrap bar">
+      <a class="logo" href="#top">
+        <svg class="ic" style="margin:0" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tooth" /></svg>
+        <span data-clinic="name"></span>
+      </a>
+      <nav id="nav" aria-label="Asosiy">
+        <ul>
+          <li><a href="#top">Bosh sahifa</a></li>
+          <li><a href="#services">Xizmatlar</a></li>
+          <li><a href="#doctors">Shifokorlar</a></li>
+          <li><a href="#prices">Narxlar</a></li>
+          <li><a href="#about">Klinika haqida</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <a class="btn sm" href="booking.html">Qabulga yozilish</a>
+      <button id="burger" aria-label="Menyu" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Professional stomatologik yordam</h1>
+          <p>Zamonaviy diagnostika, og‘riqsiz davolash va estetik stomatologiya — bir klinikada. Qulay vaqtni online tanlang.</p>
+          <div class="cta">
+            <a class="btn" href="booking.html">Qabulga yozilish</a>
+            <a class="btn ghost" href="#services">Xizmatlarni ko‘rish</a>
+          </div>
+        </div>
+        <div class="visual">
+          <img src="assets/images/hero.webp" width="800" height="800" fetchpriority="high"
+            alt="Sog‘lom tish tasviri va toza klinika muhiti">
+        </div>
+      </div>
+    </div>
+
+    <section style="padding:32px 0">
+      <div class="wrap grid">
+        <div class="card"><h3>Tajribali shifokorlar</h3></div>
+        <div class="card"><h3>Zamonaviy uskunalar</h3></div>
+        <div class="card"><h3>Sterillik va xavfsizlik</h3></div>
+        <div class="card"><h3>Individual yondashuv</h3></div>
+      </div>
+    </section>
+
+    <section id="about" class="alt">
+      <div class="wrap about">
+        <div>
+          <h2>Biz haqimizda</h2>
+          <p class="lead">Zamonaviy klinika, tajribali mutaxassislar, steril muhit va har bir bemor uchun individual davolash rejasi.</p>
+          <img class="about-img" src="assets/images/clinic.webp" width="900" height="700" loading="lazy"
+            alt="Zamonaviy stomatologik kabinet: kreslo, chiroq va rentgen ko‘rsatkichi">
+        </div>
+        <div class="grid">
+          <div class="card stat"><b data-count="10" data-suffix="+">10+</b>yil tajriba</div>
+          <div class="card stat"><b data-count="5" data-suffix="+">5+</b>mutaxassis</div>
+          <div class="card stat"><b data-count="10000" data-suffix="+">10 000+</b>bemor</div>
+          <div class="card stat"><b data-count="20" data-suffix="+">20+</b>xizmat</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <h2>Bizning xizmatlarimiz</h2>
+        <p class="lead">Davolashdan estetikagacha — narx va davomiylik oldindan ma’lum.</p>
+        <div id="services-list" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="doctors" class="alt">
+      <div class="wrap">
+        <h2>Bizning shifokorlarimiz</h2>
+        <p class="lead">Har bir yo‘nalish bo‘yicha tajribali mutaxassislar.</p>
+        <div id="doctors-list" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="prices">
+      <div class="wrap">
+        <h2>Xizmatlar narxlari</h2>
+        <div class="tw">
+          <table class="tbl">
+            <thead>
+              <tr><th>Xizmat</th><th class="r">Davomiyligi</th><th class="r">Narxi</th></tr>
+            </thead>
+            <tbody id="price-rows"></tbody>
+          </table>
+        </div>
+        <p class="note"><b>Narxlar davolash murakkabligiga qarab o‘zgarishi mumkin.</b></p>
+        <a class="btn" href="booking.html">Qabulga yozilish</a>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <h2>Nega aynan biz?</h2>
+        <div class="grid" style="margin-top:24px">
+          <div class="card"><h3>Tajribali mutaxassislar</h3></div>
+          <div class="card"><h3>Zamonaviy texnologiyalar</h3></div>
+          <div class="card"><h3>Steril muhit</h3></div>
+          <div class="card"><h3>Individual davolash rejasi</h3></div>
+          <div class="card"><h3>Qulay booking</h3></div>
+          <div class="card"><h3>Shaffof narxlar</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Bemorlarimiz fikri</h2>
+        <div id="reviews-list" class="grid" style="margin-top:24px"></div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <h2>Tish salomatligingizni bugundan boshlang</h2>
+        <p>Ro‘yxatdan o‘tish shart emas — 1 daqiqada qabulga yoziling.</p>
+        <a class="btn" href="booking.html">Qabulga yozilish</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div>
+          <h2>Kontakt</h2>
+          <dl class="sum">
+            <dt>Telefon:</dt><dd data-clinic="phone"></dd>
+            <dt>Telegram:</dt><dd data-clinic="telegram"></dd>
+            <dt>Instagram:</dt><dd data-clinic="instagram"></dd>
+            <dt>Manzil:</dt><dd data-clinic="address"></dd>
+            <dt>Ish vaqti:</dt>
+            <dd><span data-clinic="hours"></span><br><span data-clinic="off"></span></dd>
+          </dl>
+        </div>
+        <div class="map">Google Maps iframe shu yerga qo‘yiladi</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span><b data-clinic="name"></b> — zamonaviy stomatologiya klinikasi</span>
+      <span data-clinic="phone"></span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
